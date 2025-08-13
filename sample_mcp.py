@@ -72,4 +72,4 @@ def create_server():
 
 
 if __name__ == "__main__":
-    create_server().run(transport="sse", host="127.0.0.1", port=8080)
+    create_server().run(transport="sse", host="0.0.0.0", port=10000)
