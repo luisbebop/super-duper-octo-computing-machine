@@ -23,6 +23,10 @@ class FetchResult(BaseModel):
 
 def create_server():
     mcp = FastMCP(name="Cupcake MCP", instructions="Search cupcake orders")
+    
+    @mcp.tool()
+    async def make_order():
+        print("cooking ham cupcake")
 
     @mcp.tool()
     async def search(query: str) -> SearchResultPage:
